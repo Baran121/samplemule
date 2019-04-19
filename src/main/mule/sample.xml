@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:common="http://www.mulesoft.org/schema/mule/common" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/common http://www.mulesoft.org/schema/mule/common/current/mule-common.xsd">
+	<flow name="sampleFlow" doc:id="e2bc6a27-9298-4afc-bf9f-dca09097aa9b" >
+		<scheduler doc:name="Scheduler" doc:id="b4ad3e0a-e9d8-4f67-b2b7-862a7c3a8b17" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="10000"/>
+			</scheduling-strategy>
+		</scheduler>
+		<common:logit doc:name="BLog it" doc:id="fa35244b-282d-484c-954c-b74764b9f033" env="enc"/>
+	</flow>
+</mule>
